@@ -1,4 +1,4 @@
-(function() {
+(function(self) {
   'use strict';
 
   if (self.fetch) {
@@ -392,4 +392,4 @@
     })
   }
   self.fetch.polyfill = true
-})();
+})(typeof window === "undefined" ? global : window);
